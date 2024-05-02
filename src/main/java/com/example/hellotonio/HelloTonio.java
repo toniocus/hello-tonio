@@ -20,6 +20,11 @@ public class HelloTonio {
         return String.format("Hello %s!", name);
     }
 
+    @GetMapping("/greet/{greet}")
+    public String greet(@PathVariable final String greet) {
+        return String.format("%s Tonio!", greet);
+    }
+
     public static void main(final String[] args) {
 		SpringApplication.run(HelloTonio.class, args);
 	}
